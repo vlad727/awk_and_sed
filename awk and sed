@@ -3,3 +3,5 @@ oc get ns | awk 'NR!=1' | awk  '{print $1}'
 %s/^[ \t]//g ### To remove all whitespace (including tabs) from left to first word, enter:
 awk 'NR!=1 {print  $1}' ### NR number records and operator !=1 
 kubectl cluster-info | head -1 | awk '{print $7}' | sed -e 's/https:\/\/api\.//g;s/:6443//g' ### replace two or more values with sed 
+grep -B2 ### 2 string before match  
+grep -A2 ### 2 strings after match

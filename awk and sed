@@ -6,3 +6,4 @@ kubectl cluster-info | head -1 | awk '{print $7}' | sed -e 's/https:\/\/api\.//g
 grep -B2 ### 2 string before match  
 grep -A2 ### 2 strings after match
 kubectl get ns | awk '/test/ {print $1}' ### example search pattern "test" and print first column 
+sed -i ''   's/\"kubernetes\"//' tmp.json ### The option -i in the sed command modifies the actual sample.txt file ### '' for macos "undefined label"
